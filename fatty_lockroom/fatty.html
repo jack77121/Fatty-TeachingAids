@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="fatty.css">
+</head>
+<body>
+
+<div>
+    <!-- <script src="login.js"></script> -->
+    <img src="foxhead.jpg" alt="Think!Think!Think!" class="center" style="margin-top: 12.5%;">
+    <form onSubmit="return get_action();" id="fontA">
+        <p>寶貝女兒的電腦，先訂正完國文作業才能玩喔^.<</p>
+        <div class="column-left"><p></p></div>
+        <div class="column-center">
+            <input id="login_input" class="secret_input" type="text" value="" autofocus />
+        </div>
+        <div class="column-right">
+            <button class="btnSubmit" type="submit" value="Submit">
+                登入
+            </button>
+        </div>
+        
+    </form>
+</div>
+
+<script>
+
+function get_action(form) {
+    var login_input = document.getElementById("login_input").value;
+    if(login_input == "spicy") {
+        location = './fatty_2.html';
+    }
+    else {
+        window.alert("登入失敗");
+    }
+    return false;
+}
+</script>
+
+</body>
+</html>
+
+<style>
+
+</style>
+

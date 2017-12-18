@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="fatty.css">
+</head>
+<body>
+
+<div>
+    <!-- <script src="login.js"></script> -->
+    <img src="hug.jpg" alt="Think!Think!Think!" class="center" style="padding-top: 5%;">
+    <form onSubmit="return get_action();" id="fontA">
+        <p>約定的地方</p>
+        <div class="column-left"><p></p></div>
+        <div class="column-center">
+            <input id="login_input" class="secret_input" type="text" value="" autofocus/>
+        </div>
+        <div class="column-right">
+            <button class="btnSubmit" type="submit" value="Submit">
+                送出
+            </button>
+        </div>
+        
+    </form>
+</div>
+<audio autoplay loop>
+    <source src="./music1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+<script>
+
+
+function get_action(form) {
+    var login_input = document.getElementById("login_input").value.toLowerCase();
+    if(login_input == "rio") {
+        location = './fatty_2.html';
+    }
+    else {
+        window.alert("都最後了, 再想想吧");
+    }
+    return false;
+}
+</script>
+
+</body>
+</html>
+
+<style>
+
+</style>
+

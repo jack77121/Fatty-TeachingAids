@@ -1,0 +1,107 @@
+html {
+    height:100%;
+    background:-moz-linear-gradient(top, #273a59, #003387);
+    background:-webkit-gradient(linear, left top, left bottom, from(#273a59), to(#003387));
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+}
+
+img.left {
+    display: block;
+    margin-left: 5%;
+    border-radius: 12px;
+}
+
+p.dashed {
+    border-style: dashed;
+    color: yellow;
+    display:inline;
+    padding: 15px;
+}
+
+p.solid {
+    border-style: solid;
+    border-color: rgb(251, 255, 5);
+    padding: 15px;
+    /* width: 80%; */
+    display: inline-block;
+    text-align: left;
+}
+
+.title {
+    margin-top: 12.5%;
+    font-size: 50px;
+}
+
+.footer {
+    width: 100%;
+    height: 10%;
+    margin-top: 50px;
+}
+
+#fontA {
+    font-size: xx-large;
+    color: #ffffff;
+    font-weight: bold;
+    text-align:center;
+}
+
+.secret_input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+
+.column-left{ 
+    float: left;
+    width: 33%; 
+    text-align:center;
+}
+.column-right{ 
+    float: right; 
+    width: 33%; 
+    text-align:left;
+}
+.column-center{ 
+    width: 33%;
+    display: inline-block; 
+
+}
+
+
+
+.btnSubmit {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    height: 58px;
+    background: rgba(0, 0, 0, 0.27);
+    font-weight: bold;
+    font-size: 100%;
+    text-transform: uppercase;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+.btnSubmit:hover,
+.btnSubmit.hover {
+    border-color: rgba(52, 99, 146, 0);
+    color: #346392;
+    background: #ffffff;
+}
+.btnSubmit:active,
+.btnSubmit.active {
+    border-color: #27496d;
+    color: #27496d;
+}
+input[type="text"]
+{
+    font-size:48px;
+    color: white;
+    text-align: center;
+}
