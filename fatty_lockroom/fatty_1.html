@@ -11,31 +11,27 @@
         <p class="title">小洋的賺大錢必勝方程式</p>
         <div class="column-left"><p></p></div>
         <div class="column-center">
-            <p class="solid">
-                    已知月慧購買：<br>
-                    1000個棉花糖<br>
-                    100片厚片吐司
-            </p>
+            <p>請輸入月慧購買的棉花糖個數</p>
+            <input id="cotton_candy" class="secret_input" type="text" value="" autofocus />
+            <p>請輸入月慧購買的吐司個數</p>
+            <input id="toast" class="secret_input" type="text" value="" autofocus />
         </div>
         <div class="column-right">
-            <p>若我們成功將庫存食材全部賣完，<br>那我們會收入多少錢？</p>
-        </div>
-        <div class="footer">
-            <input id="all_income" class="secret_input" type="hidden" value="8000" autofocus />
-            <p>請將答案輸入至小洋的金庫密碼</p>
             <button class="btnSubmit" type="submit" value="Submit">
-                輸入後，請按我繼續
+                送出
             </button>
         </div>
+        
     </form>
 </div>
 
 <script>
 
 function get_action(form) {
-    var all_income = document.getElementById("all_income").value;
-    if(all_income == "8000") {
-        location = './fatty_5.html';
+    var cotton_candy = document.getElementById("cotton_candy").value;
+    var toast = document.getElementById("toast").value;
+    if(cotton_candy == "1000" && toast == "100") {
+        location = './fatty_2.html';
     }
     else {
         window.alert("再想一下吧");
@@ -50,31 +46,21 @@ function get_action(form) {
 <style>
 .column-left{ 
     float: left;
-    width: 0%; 
+    width: 5%; 
     text-align:center;
 }
 .column-right{ 
     float: right; 
-    width: 45%; 
+    width: 33%; 
     height: 100%;
-    text-align:left;
-    padding-right: 5%;
-    padding-top: 2%;
+    text-align:center;
 }
 
 .column-center{ 
-    width: 45%;
+    width: 33%;
     display: inline-block; 
-    text-align: center;
-    padding-left: 5%;
-}
-
-.secret_input {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 2px solid white;
-    width: 20%;
+    text-align: left;
+    margin-top: 5%;
 }
 
 .btnSubmit {

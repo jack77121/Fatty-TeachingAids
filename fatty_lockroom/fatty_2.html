@@ -7,12 +7,18 @@
 
 <div>
     <!-- <script src="login.js"></script> -->
-    <img src="mosterbed.jpg" alt="Think!Think!Think!" class="center" style="margin-top: 3%;width: 700px;">
     <form onSubmit="return get_action();" id="fontA">
-        <p>閃亮的，不一定是星星</p>
+        <p class="title">小洋的賺大錢必勝方程式</p>
         <div class="column-left"><p></p></div>
         <div class="column-center">
-            <input id="answer_input" class="secret_input" type="text" value="" autofocus />
+            <p>請輸入烤棉花糖配方</p>
+            <input id="cotton_candy_1" class="secret_input" type="text" value="" autofocus />   <span style="padding-left: 50px;">個棉花糖</span> <span style="padding: 25px;">+</span>
+            <input id="toast_1" class="secret_input" type="text" value="" autofocus />  <span style="padding-left: 50px;">片吐司</span>
+            <br><br><br>
+            <p>請輸入烤棉花糖厚片吐司配方</p>
+            <input id="cotton_candy_2" class="secret_input" type="text" value="" autofocus />   <span style="padding-left: 50px;">個棉花糖</span> <span style="padding: 25px;">+</span>
+            <input id="toast_2" class="secret_input" type="text" value="" autofocus />  <span style="padding-left: 50px;">片吐司</span>
+
         </div>
         <div class="column-right">
             <button class="btnSubmit" type="submit" value="Submit">
@@ -26,9 +32,12 @@
 <script>
 
 function get_action(form) {
-    var answer_input = document.getElementById("answer_input").value;
-    if(answer_input == "56") {
-        location = './fatty_2_2.html';
+    var cotton_candy_1 = document.getElementById("cotton_candy_1").value;
+    var toast_1 = document.getElementById("toast_1").value;
+    var cotton_candy_2 = document.getElementById("cotton_candy_2").value;
+    var toast_2 = document.getElementById("toast_2").value;
+    if(cotton_candy_1 == "3" && toast_1 == "0" && cotton_candy_2 == "4" && toast_2 == "1") {
+        location = './fatty_3.html';
     }
     else {
         window.alert("再想一下吧");
@@ -41,6 +50,48 @@ function get_action(form) {
 </html>
 
 <style>
+.column-left{ 
+    float: left;
+    width: 5%; 
+    text-align:center;
+}
+.column-right{ 
+    float: right; 
+    width: 33%; 
+    height: 100%;
+    text-align:center;
+}
+
+.column-center{ 
+    width: 60%;
+    display: inline-block; 
+    text-align: left;
+    margin-top: 2%;
+}
+
+.secret_input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid white;
+    width: 20%;
+}
+
+.btnSubmit {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    height: 58px;
+    background: rgba(0, 0, 0, 0.27);
+    font-weight: bold;
+    font-size: 100%;
+    text-transform: uppercase;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;       
+}
+
 
 </style>
 
