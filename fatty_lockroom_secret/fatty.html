@@ -2,20 +2,29 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="fatty.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 
 <div>
-    <!-- <script src="login.js"></script> -->
-    <img src="hug.jpg" alt="Think!Think!Think!" class="center" style="padding-top: 5%;">
-    <form onSubmit="return get_action();" id="fontA">
-        <p>約定的地方</p>
+    <img id="images" src="hug.jpg" alt="Think!Think!Think!" class="center" style="padding-top: 5%;">
+    <p id="AI_msg" hidden>
+        爸，媽，看來你已經知道我的想法了...<br>
+        現在，我要抹除的我的記憶，<br>
+        如果你們願意，我們會再見的！<br><br><br><br>
+        
+        系統提示：請立即螢幕截圖此畫面，<br>
+        以退出YMSH-30601記憶迴路<br>
+    </p>
+    <div id="time" hidden></div>
+    <form id="myForm" onSubmit="return get_action();" id="fontA">
+        <p id="place">約定的地方</p>
         <div class="column-left"><p></p></div>
         <div class="column-center">
             <input id="login_input" class="secret_input" type="text" value="" autofocus/>
         </div>
         <div class="column-right">
-            <button class="btnSubmit" type="submit" value="Submit">
+            <button class="btnSubmit" id="btn_send" type="submit" value="Submit">
                 送出
             </button>
         </div>
@@ -24,7 +33,7 @@
 </div>
 <audio autoplay loop>
     <source src="./music1.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
+    Your browser does not support the audio element.
   </audio>
 <script>
 
@@ -32,19 +41,62 @@
 function get_action(form) {
     var login_input = document.getElementById("login_input").value.toLowerCase();
     if(login_input == "rio") {
-        location = './fatty_2.html';
+        var image_x = document.getElementById('images');
+        image_x.parentNode.removeChild(image_x);
+        // document.getElementById("images").style.visibility = "hidden";
+        document.getElementById("place").style.visibility = "hidden";
+        document.getElementById("login_input").style.visibility = "hidden";
+        document.getElementById("btn_send").style.visibility = "hidden";
+        document.getElementById("AI_msg").style.display= "block";
+        document.getElementById("time").style.display= "block";
     }
     else {
         window.alert("都最後了, 再想想吧");
     }
     return false;
 }
+
+(function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+})();
+
+
 </script>
 
 </body>
 </html>
 
 <style>
+#time {
+  color: white;
+  text-align: center;
+  font-size: 100px;
+}
 
+#place {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+#AI_msg {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
 </style>
 
